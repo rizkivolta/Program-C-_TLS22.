@@ -1,0 +1,47 @@
+// Tugas PLS
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int nilai;
+ 
+   string ulang,mapel,nama;
+   cout << "masukan nama siswa \t : ";
+       cin>>nama;
+   do{
+      
+       cout<<"=================================================== \n";
+       cout << "masukan nama mata pelajaran \t : ";
+       cin>>mapel;
+      
+          cout << "masukan nilai siswa  \t: ";
+        cin >> nilai;
+        cout<<"=================================================== \n";
+   if (nilai > 84) {
+    cout << "Nama \t\t\t: "<<nama<<"\nMata Pelajaran \t\t\t: "<<mapel<<"\nNilai \t\t\t: "<<nilai<<"\nPredikat \t\t: A"<<endl;
+    cout << "Sangat baik dan sempurna. Dapat mengingat, mengetahui, menerapkan, menganalisis,dan mengevaluasi semua kompetensi dasar " <<mapel<<" dengan baik."<<endl;
+  }
+  else if (85 > nilai and nilai > 69) {
+   cout << "Nama \t\t\t: "<<nama<<"\nMata Pelajaran \t\t: "<<mapel<<"\nNilai \t\t\t: "<<nilai<<"\nPredikat \t\t: B"<<endl;
+    cout << "Baik. Dapat mengingat, mengetahui, menerapkan, menganalis sebagian besar kompetensi dasar tetapi kurang bisa mengevaluasi dua kompetensi dasar "<<mapel<<endl;
+  }
+  else if (70 > nilai and nilai > 54) {
+   cout << "Nama \t\t\t: "<<nama<<"\nMata Pelajaran \t\t: "<<mapel<<"\nNilai \t\t\t: "<<nilai<<"\nPredikat \t\t: C"<<endl;
+    cout << "Cukup. Dapat mengingat, mengetahui sebagian kompetensi dasar,tetapi kurang bisa menerapkan, menganalisis dan mengevaluasi beberapa kompetensi dasar " <<mapel<<endl;
+  }
+  else if (nilai < 55) {
+    cout << "Nama \t\t\t: "<<nama<<"\nMata Pelajaran \t\t: "<<mapel<<"\nNilai \t\t\t: "<<nilai<<"\nPredikat \t\t: E"<<endl;
+    cout << "Maaf anda belum lulus dan harus mengulang pelajaran ini.";
+  }
+  else {
+    cout << "Maaf, format nilai tidak sesuai" << endl;
+  }
+  
+   cout<<"\nlanjutkan pelajaran selanjutnya (yes/no)";
+   cin>>ulang;
+   }while (ulang=="yes");
+   cout<<"\n Program selesai";
+
+    return 0;
+}
